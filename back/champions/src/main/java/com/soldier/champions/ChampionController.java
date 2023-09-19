@@ -1,14 +1,13 @@
-package com.soldier.champions.controller;
+package com.soldier.champions;
+
+
+import com.soldier.champions.model.Campeao;
 
 import java.util.List;
-
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.soldier.champions.model.Campeao;
-import com.soldier.champions.repository.CampeaoRepository;
 
 
 @RestController
