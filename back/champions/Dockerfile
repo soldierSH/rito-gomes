@@ -9,7 +9,7 @@ COPY . .
 RUN mvn clean package
 FROM openjdk:17.0.1-jdk
 # Copie o arquivo JAR compilado do estágio anterior para a imagem final
-COPY --from=builder /app/target/ChampionsApplication.jar /app/ChampionsApplication.jar
+COPY --from=build /app/target/ChampionsApplication.jar /app/ChampionsApplication.jar
 
 EXPOSE 8080
 
