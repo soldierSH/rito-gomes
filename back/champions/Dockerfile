@@ -1,21 +1,8 @@
 # Use a imagem base do Ubuntu 20.04 LTS
 FROM ubuntu:20.04
 
-# Instale o curl
-RUN apt-get update && apt-get install -y curl
-#################MAVEN
-# Define a versão do Maven que você deseja usar
-ARG MAVEN_VERSION=3.6.3
 
-# Defina a URL do Apache Maven para download
-ENV MAVEN_URL=https://apache.osuosl.org/maven/maven-3/${MAVEN_VERSION}/binaries/apache-maven-${MAVEN_VERSION}-bin.tar.gz
-
-# Faça o download e instale o Maven
-RUN curl -fsSL -o /tmp/apache-maven.tar.gz $MAVEN_URL \
-    && tar -xzf /tmp/apache-maven.tar.gz -C /usr/share \
-    && mv /usr/share/apache-maven-${MAVEN_VERSION} /usr/share/maven \
-    && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
-######################
+#################
 
 # Atualize a lista de pacotes e instale o software-properties-common
 RUN apt-get update && apt-get install -y software-properties-common
@@ -27,7 +14,8 @@ RUN add-apt-repository ppa:openjdk-r/ppa
 RUN apt-get update
 
 # Instale o JDK 17
-RUN apt-get install -y openjdk-17-jdk
+RUN apt-get install -y openjdk-17-jdk maven
+RUN mvn -v
 
 # Defina as variáveis de ambiente JAVA_HOME e PATH
 ENV JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
