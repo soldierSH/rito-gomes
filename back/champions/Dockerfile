@@ -1,6 +1,24 @@
-# Use uma imagem base com JDK 17
-FROM adoptopenjdk/openjdk17:latest
+# Use a imagem base do Ubuntu 20.04 LTS
+FROM ubuntu:20.04
 
+# Atualize a lista de pacotes e instale o software-properties-common
+RUN apt-get update && apt-get install -y software-properties-common
+
+# Adicione o repositório do OpenJDK
+RUN add-apt-repository ppa:openjdk-r/ppa
+
+# Atualize novamente a lista de pacotes
+RUN apt-get update
+
+# Instale o JDK 17
+RUN apt-get install -y openjdk-17-jdk
+
+# Defina as variáveis de ambiente JAVA_HOME e PATH
+ENV JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+ENV PATH=$PATH:$JAVA_HOME/bin
+
+
+##Projeto
 # Defina o diretório de trabalho como /app
 WORKDIR /app
 
