@@ -1,7 +1,8 @@
 # Use a imagem base do Ubuntu 20.04 LTS
 FROM ubuntu:20.04
 
-
+# Instale o curl
+RUN apt-get update && apt-get install -y curl
 #################MAVEN
 # Define a versão do Maven que você deseja usar
 ARG MAVEN_VERSION=3.6.3
