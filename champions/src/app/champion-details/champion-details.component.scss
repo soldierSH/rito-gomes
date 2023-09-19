@@ -1,0 +1,132 @@
+
+.content {
+  margin: 0;
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  min-height: 100vh; /* Use min-height para garantir que a página tenha pelo menos 100% da altura da viewport */
+  box-sizing: border-box; /* Mantém a altura da .content dentro dos 100vh */
+}
+.champion__container {
+  top: 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.blur{
+  width: 100%;
+  display: flex;
+  position: relative;
+  filter: blur(4px);
+  background-color: rgba(0,0,0,.4);
+  margin: auto;
+}
+.champion__info{
+  padding-top: 40px;
+  height: 100%;
+  width: auto;
+  align-items:baseline;
+  justify-content: center;
+  display: flex;
+  position: absolute;
+}
+
+.champion__content{
+  align-items:flex-end;
+  margin: auto;
+  display: flex;
+  height: 100%;
+  position: absolute;
+  color: antiquewhite;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.champion__position{
+  justify-content: center;
+  width: 60%;
+}
+.champion__back{
+  align-self: stretch;
+  width: 100%;
+}
+.text__position{
+  width: 80%;
+}
+.champion__text{
+  align-items: center;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  width:100%;
+}
+.champion__img{
+  width: 96%;
+  margin-top: 10px;
+  box-shadow: 3px 3px 5px rgba(0,0,0,0.4);
+}
+.gradient{
+  height: 60%;
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(4, 2, 44, .95) 35%, rgb(4, 2, 44) 100%);
+}
+.champion__titulo{
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.champion__subtitulo{
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  font-weight: 400;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.champion__title{
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  font-size: 6.2rem;
+  margin: 20px 0;
+}
+.champion__description{
+  font-weight: 400;
+  font-size: 1rem;
+  justify-content: space-around;
+  display: flex;
+
+}
+.champion__funcao,.champion__dificuldade, .champion__regiao {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column; /* Empilhar os spans verticalmente */
+  align-items: center; /* Centralizar o conteúdo horizontalmente */
+}
+.champion__footer, .champions__links{
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(2, 0, 36);
+  height: 100px;
+}
+.title{
+  color: rgb(223, 182, 0);
+  margin-bottom: 4px;
+}
+.champions__links a{
+  margin-bottom: 4px;
+  color: rgb(127, 141, 0);
+  text-decoration: none;
+}
+.champions__links{
+  display: flex;
+  flex-direction: column;
+}
+.champions__links a:hover{
+  color:rgb(184, 184, 0);
+  text-decoration:underline;
+}

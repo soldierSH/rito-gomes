@@ -1,0 +1,45 @@
+table {
+  width: 100%;
+}
+.loading{
+  background: rgba(0,0,0,0.15);
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.button-toolbar{
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+.buttons{
+  margin-right: 36px;
+}
+.button {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  margin: 8px;
+  border: 2px solid transparent; /* Borda inicial transparente */
+}
+.button:hover {
+  border-bottom-color: blue; /* Cor da borda ao passar o mouse */
+}
+.demo-table {
+  width: 100%;
+}
+
+.mat-mdc-row .mat-mdc-cell {
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent;
+  cursor: pointer;
+}
+
+.mat-mdc-row:hover .mat-mdc-cell {
+  border-color: currentColor transparent;
+}
+
+.demo-row-is-clicked {
+  font-weight: bold;
+}

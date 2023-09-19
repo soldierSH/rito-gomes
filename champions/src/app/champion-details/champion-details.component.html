@@ -1,0 +1,49 @@
+<div class="content">
+  <div class="champion__container">
+    <div class="blur">
+      <img src="{{champion?.imagem}}" alt="" class="champion__back">
+    </div>
+    <div class="champion__info">
+      <img src="{{champion?.imagem}}" alt="" class="champion__img">
+    </div>
+    <div class="champion__content">
+      <div class="gradient">
+      <div class="champion__position">
+
+        <div class="champion__titulo">
+          <span class="champion__subtitulo">{{champion?.subtitulo}}</span>
+          <h2 class="champion__title">{{champion?.name}}</h2>
+        </div>
+        <div class="champion__description">
+          <div class="champion__funcao">
+            <span class="title">Função</span>
+            <span>{{champion?.funcao}}</span>
+          </div>
+          <div class="champion__dificuldade">
+            <span class="title">Dificuldade</span>
+            <span>{{champion?.dificuldade}}</span>
+          </div>
+          <div class="champion__regiao">
+            <span class="title">Região</span>
+            <span>{{champion?.regiao}}</span>
+          </div>
+        </div>
+        <div class="champion__text">
+          <div class="text__position">
+            <p>{{champion?.texto}}</p>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="champion__footer">
+
+    <div class="champions__links">
+      <a href="{{champion?.link}}">Página do Campeão</a>
+      <a href="{{champion?.linklore}}">Biografia do Campeão</a>
+    </div>
+  </div>
+</div>

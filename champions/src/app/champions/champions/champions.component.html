@@ -1,0 +1,44 @@
+<mat-card>
+  <mat-toolbar>
+    <span style="font-size: 18px;">Escolha seu Campeão</span>
+    <div class="button-toolbar">
+      <div class="buttons">
+        <button mat-button style="color: rgba(0,0,0,0.7);" class="button">Todos</button>
+        <button mat-button style="color: rgba(0,0,0,0.7);" class="button">Assassinos</button>
+        <button mat-button style="color: rgba(0,0,0,0.7);" class="button">Lutadores</button>
+        <button mat-button style="color: rgba(0,0,0,0.7);" class="button">Magos</button>
+        <button mat-button style="color: rgba(0,0,0,0.7);" class="button">Atiradores</button>
+        <button mat-button style="color: rgba(0,0,0,0.7);" class="button">Suportes</button>
+        <button mat-button style="color: rgba(0,0,0,0.7);" class="button">Tanques</button>
+      </div>
+    </div>
+  </mat-toolbar>
+  <div *ngIf="champions$ | async  as champions; else loading">
+    <table mat-table [dataSource]="champions$" class="mat-elevation-z8">
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef style="color: #b3151b;font-size: 16px;"> Nome </th>
+        <td mat-cell *matCellDef="let champion"> {{champion.name}} </td>
+      </ng-container>
+      <!-- Role Column -->
+      <ng-container matColumnDef="funcao">
+        <th mat-header-cell *matHeaderCellDef style="color: #b3151b;font-size: 16px;"> Função </th>
+        <td mat-cell *matCellDef="let champion"> {{champion.funcao}} </td>
+      </ng-container>
+      <!-- Difficulty Column -->
+      <ng-container matColumnDef="dificuldade">
+        <th mat-header-cell *matHeaderCellDef style="color: #b3151b;font-size: 16px;"> Dificuldade </th>
+        <td mat-cell *matCellDef="let champion"> {{champion.dificuldade}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let champion; columns: displayedColumns;" (click)="clickDetails(champion.name)"></tr>
+    </table>
+
+  </div>
+  <ng-template #loading>
+    <div class="loading">
+      <mat-spinner color="warn"></mat-spinner>
+    </div>
+  </ng-template>
+</mat-card>

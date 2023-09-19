@@ -1,0 +1,27 @@
+/* Estilização para centralizar verticalmente os itens filhos da classe .cabecalho e alinhar o botão à direita */
+.cabecalho {
+  display: flex;
+  align-items: center;
+  width: 100%; /* Ocupa 100% da largura */
+  justify-content: space-between;
+}
+
+/* Centralizar horizontalmente todo o conteúdo da .cabecalho */
+.cabecalho-content {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1; /* Cresce para ocupar espaço disponível */
+}
+
+/* Estilização do logotipo */
+.logo {
+  width: 126px;
+  height: auto;
+}
+.button-info{
+  display: flex;
+  justify-content: space-around;
+  width: 126px;
+}
