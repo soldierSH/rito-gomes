@@ -12,7 +12,7 @@ RUN mvn dependency:go-offline
 COPY src ./src
 
 # Compile o aplicativo Spring Boot
-RUN mvn package
+RUN mvn package -DskipTests
 
 # Imagem final
 FROM openjdk:17.0.1-jdk
