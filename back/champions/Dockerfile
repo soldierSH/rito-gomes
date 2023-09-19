@@ -11,7 +11,7 @@ RUN add-apt-repository ppa:openjdk-r/ppa
 RUN apt-get update
 
 # Instale o JDK 17
-RUN apt-get install -y openjdk-17-jdk
+RUN apt-get install -y openjdk-17-jdk maven
 
 # Defina as variáveis de ambiente JAVA_HOME e PATH
 ENV JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
