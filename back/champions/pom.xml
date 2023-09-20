@@ -55,7 +55,16 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-					<mainClass>com.soldier.champions.ChampionsApplication</mainClass>
+					<executions>
+						<execution>
+							<goals>
+								<goal>repackage</goal>
+							</goals>
+							<configuration>
+								<mainClass>com.soldier.champions.ChampionsApplication</mainClass>
+							</configuration>
+						</execution>
+					</executions>
 					<excludes>
 						<exclude>
 							<groupId>org.projectlombok</groupId>
