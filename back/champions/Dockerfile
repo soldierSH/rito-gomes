@@ -23,5 +23,16 @@ COPY --from=builder /app/target/champions-0.0.1-SNAPSHOT.jar.original /app/Champ
 # Exponha a porta em que o aplicativo Spring Boot está sendo executado
 EXPOSE 8080
 
+#################
+# Adicione um comando de depuração para listar o conteúdo do diretório /back
+RUN ls -la /back
+
+# Adicione um comando de depuração para listar o conteúdo do diretório /back/champions
+RUN ls -la /back/champions
+
+# Adicione um comando de depuração para listar o conteúdo do diretório /back/champions/src/app
+RUN ls -la /back/champions/src/app
+#################
+
 # Comando para iniciar o aplicativo Spring Boot quando o contêiner for iniciado
 CMD ["java", "-jar", "back/champions/src/app/ChampionsApplication.jar"]
