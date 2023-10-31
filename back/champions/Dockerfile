@@ -30,4 +30,4 @@ RUN ls -la /app
 #################
 
 # Comando para iniciar o aplicativo Spring Boot quando o contêiner for iniciado
-CMD ["java", "-jar", "back/champions/src/app/ChampionsApplication.jar"]
+CMD ["java", "-jar", "/app/ChampionsApplication.jar"]
