@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <jardesc>
-    <jar path="back/champions/src/ChampionsApplication.jar"/>
+    <jar path="back/champions/src/app/ChampionsApplication.jar"/>
     <options buildIfNeeded="true" compress="true" descriptionLocation="/back/champions/src/createjar.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="false" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
     <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
     <selectedProjects/>

@@ -24,4 +24,4 @@ COPY --from=builder /app/target/champions-0.0.1-SNAPSHOT.jar.original /app/Champ
 EXPOSE 8080
 
 # Comando para iniciar o aplicativo Spring Boot quando o contêiner for iniciado
-CMD ["java", "-jar", "/src/ChampionsApplication.jar"]
+CMD ["java", "-jar", "/app/ChampionsApplication.jar"]
