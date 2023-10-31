@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jardesc>
+    <jar path="back/champions/src/ChampionsApplication.jar"/>
+    <options buildIfNeeded="true" compress="true" descriptionLocation="/back/champions/src/app/createjar.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="false" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
+    <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
+    <selectedProjects/>
+    <manifest generateManifest="false" mainClassHandleIdentifier="=champions/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.soldier.champions{ChampionsApplication.java[ChampionsApplication" manifestLocation="/champions/Manifest.mf" manifestVersion="1.0" reuseManifest="true" saveManifest="true" usesManifest="true">
+        <sealing sealJar="false">
+            <packagesToSeal/>
+            <packagesToUnSeal/>
+        </sealing>
+    </manifest>
+    <selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
+        <project name="back"/>
+        <file path="/back/champions/mvnw.cmd"/>
+        <folder path="/back/champions/src"/>
+        <file path="/back/champions/pom.xml"/>
+        <file path="/back/champions/.project"/>
+        <javaElement handleIdentifier="=champions/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/"/>
+        <file path="/back/champions/Dockerfile"/>
+        <file path="/back/champions/mvnw"/>
+        <folder path="/back/champions/target"/>
+        <file path="/back/champions/HELP.md"/>
+        <file path="/back/champions/.classpath"/>
+        <file path="/back/champions/.gitignore"/>
+    </selectedElements>
+</jardesc>
