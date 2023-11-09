@@ -14,6 +14,7 @@
 	<name>champions</name>
 	<description>Rito Gomes</description>
 	<properties>
+		<main.class>com.soldier.champions.ChampionsApplication</main.class>
 		<java.version>17</java.version>
 	</properties>
 	<dependencies>
@@ -55,6 +56,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
+					<mainClass>com.soldier.champions.ChampionsApplication</mainClass>
 					<executions>
 						<execution>
 							<goals>
@@ -73,6 +75,7 @@
 					</excludes>
 					<archive>
 						<manifest>
+							<addClasspath>true</addClasspath>
 							<mainClass>com.soldier.champions.ChampionsApplication</mainClass>
 						</manifest>
 					</archive>
