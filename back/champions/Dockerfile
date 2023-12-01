@@ -25,8 +25,7 @@ WORKDIR /app
 # Copie o arquivo JAR compilado do estágio anterior para o contêiner
 COPY --from=builder /app/target/champions-0.0.1-SNAPSHOT.jar.original ChampionsApplication.jar
 
-# Adicione um comando de depuração para listar o conteúdo do diretório /app
-RUN ls -la
-
 # Comando para executar a aplicação
 CMD ["java", "-jar", "ChampionsApplication.jar"]
+
+docker build --debug -t nome-da-imagem .
