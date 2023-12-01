@@ -1,33 +1,32 @@
-# Use a imagem oficial do Maven como base
-FROM maven:3.8.5-openjdk-17 AS builder
+# Estágio 1: Construa a aplicação
+FROM maven:3.8.4-openjdk-11 AS builder
 
-# Diretório de trabalho no contêiner
+# Defina o diretório de trabalho no contêiner
 WORKDIR /app
 
-# Copie o arquivo pom.xml e faça o download das dependências antes de copiar o código-fonte
+# Copie o arquivo pom.xml para o contêiner
 COPY pom.xml .
+
+# Baixe as dependências do Maven
 RUN mvn dependency:go-offline
 
-# Copie o código-fonte para o contêiner
-COPY src ./src
+# Copie os arquivos de origem para o contêiner
+COPY src src
 
-# Compile o aplicativo Spring Boot
+# Compile o projeto
 RUN mvn package -DskipTests
 
-# Imagem final
-FROM openjdk:17.0.1-jdk
+# Estágio 2: Crie a imagem final
+FROM openjdk:11-jre-slim
 
-# Copie o arquivo JAR compilado do estágio anterior para a imagem final
-COPY --from=builder /app/target/champions-0.0.1-SNAPSHOT.jar.original target/ChampionsApplication.jar
+# Defina o diretório de trabalho no contêiner
+WORKDIR /app
 
-# Exponha a porta em que o aplicativo Spring Boot está sendo executado
-EXPOSE 8080
+# Copie o arquivo JAR compilado do estágio anterior para o contêiner
+COPY --from=builder /app/target/champions-0.0.1-SNAPSHOT.jar.original ChampionsApplication.jar
 
-#################
 # Adicione um comando de depuração para listar o conteúdo do diretório /app
-RUN ls -la /app
+RUN ls -la
 
-#################
-
-# Comando para iniciar o aplicativo Spring Boot quando o contêiner for iniciado
-CMD ["java", "-jar", "/app/ChampionsApplication.jar"]
+# Comando para executar a aplicação
+CMD ["java", "-jar", "ChampionsApplication.jar"]
