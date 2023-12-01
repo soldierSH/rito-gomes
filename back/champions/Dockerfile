@@ -28,4 +28,3 @@ COPY --from=builder /app/target/champions-0.0.1-SNAPSHOT.jar.original ChampionsA
 # Comando para executar a aplicação
 CMD ["java", "-jar", "ChampionsApplication.jar"]
 
-docker build --debug -t nome-da-imagem .
