@@ -18,7 +18,7 @@ RUN mvn package -DskipTests
 FROM openjdk:17.0.1-jdk
 
 # Copie o arquivo JAR compilado do estágio anterior para a imagem final
-COPY --from=builder /app/target/champions-0.0.1-SNAPSHOT.jar.original /app/ChampionsApplication.jar
+COPY --from=builder /app/target/champions-0.0.1-SNAPSHOT.jar.original target/ChampionsApplication.jar
 
 # Exponha a porta em que o aplicativo Spring Boot está sendo executado
 EXPOSE 8080
