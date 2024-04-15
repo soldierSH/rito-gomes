@@ -9,6 +9,7 @@ A API foi desenvolvida utilizando Spring Boot, Spring Data JPA, MySQL, Angular e
 
 ## Exemplo de uso
 A seguir, é apresentado um exemplo de como utilizar a API de Campeões do League of Legends:
+
 **1. Listagem de Campeões(API):**
 - Endpoint: /api/champions
 - Método: GET
