@@ -19,7 +19,7 @@ A seguir, é apresentado um exemplo de como utilizar a API de Campeões do Leagu
 **2. Exibição(Front):**
 
 - Listagem de todos os campeões disponíveis.
--- Filtragem dos campeões por categoria (assassinos, lutadores, magos, etc.).() ainda não tem.
+-- Filtragem dos campeões por categoria (assassinos, lutadores, magos, etc).
 - Visualização detalhada de cada campeão.
 ![Listagem](https://i.imgur.com/M0hBinv.png)
 ![Ahri](https://i.imgur.com/4aE85kp.png)
